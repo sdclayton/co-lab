@@ -1,1 +1,55 @@
-<p>sign-up works!</p>
+<div class="container">
+  <div class="row" style="justify-content: center">
+    <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <form #signupForm="ngForm" (ngSubmit)="onSubmit(signupForm)">
+        <div class="form-row">
+          <div class="form-group col-md-6" style="margin-top: 10px;">
+            <label for="firstName">First Name:</label>
+            <input
+              type="text"
+              id="firstName"
+              class="form-control"
+              placeholder="First Name"
+              name="firstName"
+              ngModel>
+          </div>
+          <div class="form-group col-md-6" style="margin-top: 10px;">
+            <label for="lastName">Last Name:</label>
+            <input
+              type="text"
+              id="lastName"
+              class="form-control"
+              placeholder="Last Name"
+              name="lastName"
+              ngModel>
+          </div>
+        </div>
+        <div class="form-group" style="margin-top: 10px;">
+          <label for="email">Email:</label>
+          <input
+            type="email"
+            id="email"
+            class="form-control"
+            name="email"
+            required
+            ngModel>
+        </div>
+        <div class="form-group" style="margin-top: 10px;">
+          <label for="password">Password:</label>
+          <input
+            type="password"
+            id="password"
+            class="form-control"
+            name="password"
+            required
+            minlength="6"
+            ngModel>
+        </div>
+        <div style="margin-top: 20px;">
+          <button type="submit" class="btn btn-primary">Sign Up</button> |
+          <small>If you already have an account please click <a routerLink="/login">here</a></small>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>
