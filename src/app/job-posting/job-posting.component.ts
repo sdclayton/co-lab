@@ -1,6 +1,6 @@
 import { Component, OnInit, Input } from '@angular/core';
 import { JobPostingService } from './job-posting.service';
-import { JobPosting } from './job-psoting.model';
+import { JobPosting } from './job-posting.model';
 
 @Component({
   selector: 'app-job-posting',
