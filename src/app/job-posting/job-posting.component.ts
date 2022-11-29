@@ -5,20 +5,38 @@ import { JobPosting } from './job-posting.model';
 @Component({
   selector: 'app-job-posting',
   templateUrl: './job-posting.component.html',
-  styleUrls: ['./job-posting.component.css']
+  styleUrls: ['./job-posting.component.css'],
 })
+
+// export class JobPosting {
+//   constructor(
+//     public category: { name: string }[],
+//     company: string,
+//     level: string,
+//     location: string,
+//     refs: string
+//   ) {}
+// }
 export class JobPostingComponent implements OnInit {
+  jobPosting: JobPosting[] = [];
 
-  @Input() jobPosting: JobPosting[]
-  // jobPosting: any [];
-
-  constructor(private jobPostingService: JobPostingService) { }
+  constructor(private jobPostingService: JobPostingService) {}
 
   ngOnInit(): void {
     this.jobPostingService.getJobPost().subscribe((data: any) => {
-      // this.jobPosting = data;
       console.log(data)
-    })
+      data.results.forEach((jobPosting) => {
+
+        // Iterate through categories
+
+        this.jobPosting.push(
+          new JobPosting(jobPosting.categories[0].name, jobPosting.company.name, jobPosting.levels[0].name, '', '')
+        );
+      });
+
+      console.log(this.jobPosting)
+      // this.jobPosting = data;
+      // console.log(data);
+    });
   }
 }
-
