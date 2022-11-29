@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { JobPostingService } from './job-posting.service';
 
 @Component({
   selector: 'app-job-posting',
@@ -7,9 +8,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class JobPostingComponent implements OnInit {
 
-  constructor() { }
+  jobPosting: any [];
+
+  constructor(private jobPostingService: JobPostingService) { }
 
   ngOnInit(): void {
+    this.jobPostingService.getJobPost().subscribe((data: any) => {
+      // this.jobPosting = data;
+      console.log(data)
+    })
   }
-
 }
+
