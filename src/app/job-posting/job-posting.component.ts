@@ -1,5 +1,6 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
 import { JobPostingService } from './job-posting.service';
+import { JobPosting } from './job-psoting.model';
 
 @Component({
   selector: 'app-job-posting',
@@ -8,7 +9,8 @@ import { JobPostingService } from './job-posting.service';
 })
 export class JobPostingComponent implements OnInit {
 
-  jobPosting: any [];
+  @Input() jobPosting: JobPosting[]
+  // jobPosting: any [];
 
   constructor(private jobPostingService: JobPostingService) { }
 
