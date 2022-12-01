@@ -1,0 +1,13 @@
+<div
+  class="container"
+  *ngFor="let post of listPost; let postIndex = index">
+
+  <div class="card">
+    <div class="card-header"> This is a card header </div>
+    <div class="card-body">
+      <h5 class="card-title"> {{post.title}}</h5>
+      <p class="card-text"> {{post.postText}}</p>
+    </div>
+    <button class="btn btn-primary" type="button">Reply</button>
+  </div>
+</div>

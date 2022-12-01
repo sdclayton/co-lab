@@ -6,17 +6,25 @@ import { AppComponent } from './app.component';
 import { LoginComponent } from './login/login.component';
 import { SignUpComponent } from './sign-up/sign-up.component';
 import { JobPostingComponent } from './job-posting/job-posting.component';
+import { DiscussionComponent } from './discussion/discussion.component';
+import { DiscussionCardComponent } from './discussion/discussion-post/discussion-card/discussion-card.component';
+import { FormsModule } from '@angular/forms';
+import { DiscussionPostComponent } from './discussion/discussion-post/discussion-post.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignUpComponent,
-    JobPostingComponent
+    JobPostingComponent,
+    DiscussionComponent,
+    DiscussionCardComponent,
+    DiscussionPostComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
