@@ -1,6 +1,8 @@
 <div class="container">
   <div class="row" style="justify-content: center">
     <div class="col-xs-12 col-md-6 col-md-offset-3">
+      <h1>Please login</h1>
+      <hr>
       <form #loginForm="ngForm" (ngSubmit)="onSubmit(loginForm)">
         <div class="form-group" style="margin-top: 10px;">
           <label for="email">Email:</label>
@@ -26,7 +28,8 @@
             placeholder="Password">
         </div>
         <div style="margin-top: 20px;">
-          <button type="submit" class="btn btn-primary">Login</button>
+          <button type="submit" class="btn btn-primary">Login</button> |
+          <small>If you don't have an account please sign up, <a routerLink="/signup">here</a></small>
         </div>
       </form>
     </div>
