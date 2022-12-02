@@ -9,6 +9,7 @@ import { DiscussionService } from '../discussion.service';
   styleUrls: ['./discussion-post.component.css']
 })
 export class DiscussionPostComponent implements OnInit {
+  openform = false;
   listPost: any;
 
   post: any = {
@@ -31,5 +32,10 @@ export class DiscussionPostComponent implements OnInit {
       title: title,
       postText: postText
     });
+  }
+  onClickOpenForm(){
+    this.openform=true;
+    console.log('this works also')
+    return this.openform;
   }
 }

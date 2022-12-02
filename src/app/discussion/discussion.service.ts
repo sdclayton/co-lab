@@ -5,6 +5,7 @@ import { discussion } from "../shared/discussion.model";
 @Injectable({providedIn:'root'})
 
 export class DiscussionService {
+openform=false;
 
   postChange = new Subject<discussion[]>();
   private discussionPost: discussion[] = [{
@@ -23,4 +24,5 @@ export class DiscussionService {
     this.postChange.next(this.getPost());
     console.log('this works')
   }
+
 }

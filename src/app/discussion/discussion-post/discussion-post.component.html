@@ -1,17 +1,15 @@
 <h1>Discussions</h1>
+<div class="container">
+  <button
+  type="button"
+  class="btn btn-success"
+  (click)="onClickOpenForm()">
+    +
+  </button>
+</div>
 
-<form (ngSubmit)="onAddPost(InputRef)" #InputRef="ngForm">
+<form (ngSubmit)="onAddPost(InputRef)" #InputRef="ngForm" [hidden]="!onClickOpenForm()">
   <div class= "container">
-    <div class="form-group">
-      <label for="titleOfDiscussion">Title</label>
-      <input
-        type="text"
-        class="form-control"
-        name="title"
-        id="title"
-        style = "width: 40rem"
-        [ngModel]="this.post.title">
-    </div>
     <div class="form-group">
       <label for="postText">Text</label>
       <input
@@ -20,13 +18,17 @@
         name="postText"
         id="postText"
         style = "width: 40rem; height:2.5in"
-        [ngModel]="this.post.postText">
+        [ngModel]="this.post.postText"
+        required>
     </div>
-    <button type="submit" class="btn btn-success">Submit</button>
+    <button
+      type="submit"
+      class="btn btn-success"
+      [disabled]="!InputRef.valid">
+      Submit
+    </button>
   </div>
 </form>
 
 <hr>
-
-<app-discussion-card ></app-discussion-card>
 
