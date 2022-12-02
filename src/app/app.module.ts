@@ -8,13 +8,15 @@ import { SignUpComponent } from './sign-up/sign-up.component';
 import { JobPostingComponent } from './job-posting/job-posting.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignUpComponent,
-    JobPostingComponent
+    JobPostingComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
