@@ -1,13 +1,13 @@
-<!-- *ngFor="let jobPost of jobPosting; let i=index -->
+
 <div class="container">
-  <div class="card" style="width: 18rem;">
+  <div class="card" style="width: 18rem;" *ngFor="let jobPost of jobPosting; let i=index">
     <div class="card-body">
-      <h5 class="card-title">name</h5>
-      <h6 class="card-text">company</h6>
-      <h6 class="">category</h6>
-      <p>level</p>
-      <p>location</p>
-      <a href="https://www.themuse.com" class="btn btn-primary">Go To Job Posting</a>
+      <h5 class="card-title">{{jobPost.category}}</h5>
+      <h6 class="card-text">{{jobPost.company}}</h6>
+      <h6 class="">{{jobPost.level}}</h6>
+      <!-- <p>{{location.}}</p> -->
+      <a href="{{jobPost.refs}}" target="_blank" class="btn btn-primary">Go To Job Posting</a>
     </div>
   </div>
 </div>
+<!-- new JobPosting(jobPosting.categories[0].name, jobPosting.company.name, jobPosting.levels[0].name, jobPosting.location[0].name, jobPosting.refs.landing_page) -->
