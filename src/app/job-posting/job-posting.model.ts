@@ -1,12 +1,6 @@
 export class JobPosting {
   constructor(
     public category: string,
-
-    // public company.name,
-    // public levels[0].name,
-    // public locations[0].name,
-    // public refs.landing_page,
-
     public company: string,
     public level: string,
     public location: string,

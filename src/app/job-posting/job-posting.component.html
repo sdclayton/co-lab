@@ -1,13 +1,34 @@
+<div class="container mt-5">
+  <div class="row">
+    <div class="col-6">
+      <h3>Job Posting</h3>
+      <div
+        class="card"
+        style="width: 18rem; margin: 8px 0px;"
+        *ngFor="let jobPost of jobPosting; let i = index"
+      >
+        <div class="card-body">
+          <h5 class="card-title">{{ jobPost.category }}</h5>
+          <h6 class="card-text">{{ jobPost.company }}</h6>
+          <h6 class="">{{ jobPost.level }}</h6>
+          <a href="{{ jobPost.refs }}" target="_blank" class="btn btn-primary"
+            >Go To Job Posting</a
+          >
+        </div>
+      </div>
+    </div>
 
-<div class="container">
-  <div class="card" style="width: 18rem;" *ngFor="let jobPost of jobPosting; let i=index">
-    <div class="card-body">
-      <h5 class="card-title">{{jobPost.category}}</h5>
-      <h6 class="card-text">{{jobPost.company}}</h6>
-      <h6 class="">{{jobPost.level}}</h6>
-      <!-- <p>{{location.}}</p> -->
-      <a href="{{jobPost.refs}}" target="_blank" class="btn btn-primary">Go To Job Posting</a>
+    <div class="col-6">
+      <div style="position: sticky; top: 16px" >
+        <h3>Job Detail</h3>
+        <div>
+          When you join our team as a Stocker, you’ll be responsible for
+          stocking, organizing new incoming inventory and safely operating
+          machinery. You’ll play an important role in providing an excellent
+          shopping experience by making sure product displays are merchandised,
+          expertly displayed and available to our customers.
+        </div>
+      </div>
     </div>
   </div>
 </div>
-<!-- new JobPosting(jobPosting.categories[0].name, jobPosting.company.name, jobPosting.levels[0].name, jobPosting.location[0].name, jobPosting.refs.landing_page) -->
