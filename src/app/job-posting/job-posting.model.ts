@@ -4,7 +4,8 @@ export class JobPosting {
     public company: string,
     public level: string,
     public location: string,
-    public refs: string
+    public refs: string,
+    public contents: string
   ) {}
 }
 

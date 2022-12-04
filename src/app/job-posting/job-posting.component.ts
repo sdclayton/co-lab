@@ -11,6 +11,8 @@ import { JobPosting, jobPostingItem } from './job-posting.model';
 export class JobPostingComponent implements OnInit {
   jobPosting: JobPosting[] = [];
 
+  jobDetails: JobPosting | null = null
+
   constructor(private jobPostingService: JobPostingService) {}
 
   ngOnInit(): void {
@@ -29,7 +31,8 @@ export class JobPostingComponent implements OnInit {
             jobPosting.company.name,
             jobPosting.levels[0].name,
             jobPosting.locations[0].name,
-            jobPosting.refs.landing_page
+            jobPosting.refs.landing_page,
+            jobPosting.contents
           )
         );
       });
@@ -38,5 +41,10 @@ export class JobPostingComponent implements OnInit {
       // this.jobPosting = data;
       // console.log(data);
     });
+  }
+
+  viewJobPosting(jobPost) {
+    console.log(jobPost)
+    this.jobDetails = jobPost
   }
 }

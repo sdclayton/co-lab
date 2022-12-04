@@ -1,11 +1,12 @@
 <div class="container mt-5">
   <div class="row">
-    <div class="col-6">
+    <div class="col-4">
       <h3>Job Posting</h3>
       <div
         class="card"
-        style="width: 18rem; margin: 8px 0px;"
+        style="width: 18rem; margin: 8px 0px; cursor: pointer"
         *ngFor="let jobPost of jobPosting; let i = index"
+        (click)="viewJobPosting(jobPost)"
       >
         <div class="card-body">
           <h5 class="card-title">{{ jobPost.category }}</h5>
@@ -18,15 +19,23 @@
       </div>
     </div>
 
-    <div class="col-6">
-      <div style="position: sticky; top: 16px" >
+    <div class="col-8">
+      <div style="position: sticky; top: 16px">
         <h3>Job Detail</h3>
-        <div>
-          When you join our team as a Stocker, you’ll be responsible for
-          stocking, organizing new incoming inventory and safely operating
-          machinery. You’ll play an important role in providing an excellent
-          shopping experience by making sure product displays are merchandised,
-          expertly displayed and available to our customers.
+        <p>click a card to show it's details!</p>
+
+        <div *ngIf="jobDetails">
+          <div class="card">
+            <h5 class="card-header">{{ jobDetails.category }}</h5>
+            <div class="card-body">
+              <h5 class="card-title">{{ jobDetails.company }}</h5>
+
+              <!-- {{jobDetails.contents}} -->
+
+              <div [innerHTML]="jobDetails.contents"></div>
+              <a href="#" class="btn btn-primary">Go somewhere</a>
+            </div>
+          </div>
         </div>
       </div>
     </div>
