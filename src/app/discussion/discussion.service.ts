@@ -1,28 +1,36 @@
-import { Injectable } from "@angular/core";
-import { Subject } from "rxjs";
-import { discussion } from "../shared/discussion.model";
+import { Injectable } from '@angular/core';
+import { Subject } from 'rxjs';
+import { Discussion } from './discussion.model';
 
-@Injectable({providedIn:'root'})
-
+@Injectable({ providedIn: 'root' })
 export class DiscussionService {
-openform=false;
+  openform = false;
 
-  postChange = new Subject<discussion[]>();
-  private discussionPost: discussion[] = [{
-    title: "Test",
-    postText: "This is a test"
-  }];
+  postChange = new Subject<Discussion[]>();
+  private discussionPost: Discussion[] = [
+    {
+      id: 10,
+      title: 'How does one make a Reddit Clone?',
+      postText:
+        'Does anyone know how to make or know of resources to make a Reddit Clone?',
+    },
+    {
+      id: 20,
+      title: 'How does one make cookies',
+      postText:
+        'Tri-tip pork belly shoulder capicola pork picanha flank. Ribeye meatball corned beef bresaola sausage pancetta alcatra tenderloin. Strip steak ground round ball tip bresaola landjaeger, andouille filet mignon leberkas ham. Ground round hamburger turducken porchetta chislic bacon rump short loin sausage biltong pancetta shoulder burgdoggen cupim.',
+    },
+  ];
 
-  constructor(){}
+  constructor() {}
 
-  getPost(){
+  getPost() {
     return this.discussionPost.slice();
   }
 
-  addPost(newPost: discussion){
+  addPost(newPost: Discussion) {
     this.discussionPost.push(newPost);
     this.postChange.next(this.getPost());
-    console.log('this works')
+    console.log('this works');
   }
-
 }

@@ -1,41 +1,47 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
-import { discussion } from 'src/app/shared/discussion.model';
+import { ActivatedRoute, Router } from '@angular/router';
+import { findIndex } from 'rxjs';
+import { Discussion } from '../discussion.model';
 import { DiscussionService } from '../discussion.service';
 
 @Component({
   selector: 'app-discussion-post',
   templateUrl: './discussion-post.component.html',
-  styleUrls: ['./discussion-post.component.css']
+  styleUrls: ['./discussion-post.component.css'],
 })
 export class DiscussionPostComponent implements OnInit {
   openform = false;
   listPost: any;
 
   post: any = {
-    title: "",
-    postText: ""
+    title: '',
+    postText: '',
   };
 
-  constructor(public discussionService: DiscussionService) {}
+  constructor(
+    public discussionService: DiscussionService,
+    private router: Router,
+    private route: ActivatedRoute
+  ) {}
 
   ngOnInit(): void {
-    this.discussionService.postChange.subscribe((updatePost: discussion[]) => {
+    this.discussionService.postChange.subscribe((updatePost: Discussion[]) => {
       this.post = updatePost;
     });
   }
 
-  onAddPost(InputRef: NgForm){
+  onAddPost(InputRef: NgForm) {
     const title = InputRef.value.title;
     const postText = InputRef.value.postText;
+
     this.discussionService.addPost({
+      id: this.discussionService.getPost().length + 1,
       title: title,
-      postText: postText
+      postText: postText,
     });
   }
-  onClickOpenForm(){
-    this.openform=true;
-    console.log('this works also')
-    return this.openform;
-  }
+  // onBack(){
+  //   this.router.navigate(['/discussion/card'], {relativeTo: this.route})
+  // }
 }

@@ -1,15 +1,17 @@
 <h1>Discussions</h1>
-<div class="container">
-  <button
-  type="button"
-  class="btn btn-success"
-  (click)="onClickOpenForm()">
-    +
-  </button>
-</div>
 
-<form (ngSubmit)="onAddPost(InputRef)" #InputRef="ngForm" [hidden]="!onClickOpenForm()">
+<form (ngSubmit)="onAddPost(InputRef)" #InputRef="ngForm">
   <div class= "container">
+    <div class="form-group">
+      <label for="postText">Title</label>
+      <input
+        type="text"
+        class="form-control"
+        name="title"
+        id="title"
+        [ngModel]="this.post.postText"
+        >
+    </div>
     <div class="form-group">
       <label for="postText">Text</label>
       <input
@@ -24,11 +26,18 @@
     <button
       type="submit"
       class="btn btn-success"
-      [disabled]="!InputRef.valid">
+      [disabled]="!InputRef.valid"
+      >
       Submit
+    </button> |
+    <button
+      type="button"
+      class="btn btn-danger"
+      routerLink="/discussion"
+      >
+      Cancel
     </button>
   </div>
 </form>
 
-<hr>
 

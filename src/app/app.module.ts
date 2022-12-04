@@ -10,6 +10,8 @@ import { DiscussionComponent } from './discussion/discussion.component';
 import { DiscussionCardComponent } from './discussion/discussion-card/discussion-card.component';
 import { FormsModule } from '@angular/forms';
 import { DiscussionPostComponent } from './discussion/discussion-post/discussion-post.component';
+import { PostDetailComponent } from './discussion/post-detail/post-detail.component';
+import { DiscussionShowComponent } from './discussion/discussion-show/discussion-show.component';
 
 @NgModule({
   declarations: [
@@ -20,6 +22,8 @@ import { DiscussionPostComponent } from './discussion/discussion-post/discussion
     DiscussionComponent,
     DiscussionCardComponent,
     DiscussionPostComponent,
+    PostDetailComponent,
+    DiscussionShowComponent,
   ],
   imports: [
     BrowserModule,
