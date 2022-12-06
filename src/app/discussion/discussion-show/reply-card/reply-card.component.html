@@ -1,6 +1,6 @@
 <div
-  class="container-fluid mt-100"
-  *ngFor="let post of listPost; let postIndex = index"
+  class="container"
+  *ngFor="let replyCard of replies; let replyIndex = index"
 >
   <div class="row">
     <div class="col-md-12">
@@ -17,33 +17,22 @@
             />
             <p>Username</p>
 
-            <h3>Question: {{ post.title }}</h3>
+            <h3> {{ replyCard.title }}</h3>
             <div class="media-body ml-3">
               <a></a>
-              <div class="text-muted small">ID {{ post.id }}</div>
+              <div class="text-muted small">ID {{ replyIndex.id }}</div>
             </div>
           </div>
           <div class="card-body">
-            <p>{{ post.postText | slice : 0 : 50 }}...</p>
+            <p>{{ replyCard.postText }}</p>
           </div>
           <div
             class="card-footer d-flex flex-wrap justify-content-between align-items-center px-0 pt-0 pb-3"
           >
-            <div class="px-4 pt-3">
-              <button
-                type="button"
-                class="btn btn-primary"
-                routerLink="{{ post.id }}"
-              >
-                View</button
-              >|
-              <button type="button" class="btn btn-success">
-                Save to Dashboard
-              </button>
             </div>
           </div>
         </div>
       </div>
     </div>
   </div>
-</div>
+

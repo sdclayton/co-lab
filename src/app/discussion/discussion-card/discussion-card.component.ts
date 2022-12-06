@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, Input, OnInit } from '@angular/core';
 import { DiscussionService } from '../discussion.service';
 
 @Component({
@@ -16,7 +16,10 @@ export class DiscussionCardComponent implements OnInit {
     this.discussionService.postChange.subscribe((updatedPosts) => {
       this.listPost = updatedPosts;
     });
+
   }
+
+
 
   // onViewPost() {}
 }

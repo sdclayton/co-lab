@@ -1,21 +1,21 @@
 import { Injectable } from '@angular/core';
 import { Subject } from 'rxjs';
-import { Discussion } from './discussion.model';
+import { Discussion } from '../discussion.model';
 
 @Injectable({ providedIn: 'root' })
-export class DiscussionService {
+export class ReplyService {
 
-  postChange = new Subject<Discussion[]>();
-  private discussionPost: Discussion[] = [
+  replyUpdate= new Subject<Discussion[]>();
+  private reply: Discussion[] = [
     {
       id: 10,
-      title: 'How does one make a Reddit Clone?',
+      title: 'This is a reply to Reddit Clone?',
       postText:
         'Does anyone know how to make or know of resources to make a Reddit Clone?',
     },
     {
       id: 20,
-      title: 'How does one make cookies',
+      title: 'This is how one makes cookies',
       postText:
         'Tri-tip pork belly shoulder capicola pork picanha flank. Ribeye meatball corned beef bresaola sausage pancetta alcatra tenderloin. Strip steak ground round ball tip bresaola landjaeger, andouille filet mignon leberkas ham. Ground round hamburger turducken porchetta chislic bacon rump short loin sausage biltong pancetta shoulder burgdoggen cupim.',
     },
@@ -23,17 +23,12 @@ export class DiscussionService {
 
   constructor() {}
 
-  getPost() {
-    return this.discussionPost.slice();
+  getReply() {
+    return this.reply.slice();
   }
 
-  getDiscussionShared(index: number){
-    return this.discussionPost[index];
-  }
-
-  addPost(newPost: Discussion) {
-    this.discussionPost.push(newPost);
-    this.postChange.next(this.getPost());
-    console.log('this works');
+  addReply(newReply: Discussion) {
+    this.reply.push(newReply)
+    this.replyUpdate.next(this.getReply());
   }
 }

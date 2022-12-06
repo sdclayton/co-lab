@@ -11,7 +11,6 @@ import { DiscussionService } from '../discussion.service';
   styleUrls: ['./discussion-post.component.css'],
 })
 export class DiscussionPostComponent implements OnInit {
-  openform = false;
   listPost: any;
 
   post: any = {
