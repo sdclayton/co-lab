@@ -2,42 +2,54 @@
   <div class="row">
     <div class="col-4">
       <h3>Job Posting</h3>
-      <div
-        class="card"
-        style="width: 18rem; margin: 8px 0px; cursor: pointer"
-        *ngFor="let jobPost of jobPosting; let i = index"
-        (click)="viewJobPosting(jobPost)"
-      >
+      <div class="card" style="width: 18rem; margin: 8px 0px; cursor: pointer"
+        *ngFor="let jobPost of jobPosting; let i = index" (click)="viewJobPosting(jobPost)">
         <div class="card-body">
           <h5 class="card-title">{{ jobPost.category }}</h5>
           <h6 class="card-text">{{ jobPost.company }}</h6>
           <h6 class="">{{ jobPost.level }}</h6>
-          <a href="{{ jobPost.refs }}" target="_blank" class="btn btn-primary"
-            >Go To Job Posting</a
-          >
+          <table>
+            <tr>
+              <td>
+                <a href="{{ jobPost.refs }}" target="_blank" class="btn btn-primary">
+                  Go To Job Posting</a>
+              </td>
+            </tr>
+            <tr>
+              <!-- <td>&nbsp;</td> -->
+            </tr>
+            <tr>
+              <td><button type="button" class="btn btn-secondary">Save Job Posting</button></td>
+            </tr>
+          </table>
+          <!-- Old button layout
+            <a
+            href="{{ jobPost.refs }}"
+            target="_blank"
+            class="btn btn-primary">
+            Go To Job Posting</a
+            >
+          <button type="button" class="btn btn-secondary">Save Job Posting</button> -->
         </div>
       </div>
     </div>
-
-    <div class="col-8">
-      <div style="position: sticky; top: 16px">
-        <h3>Job Detail</h3>
-        <p>click a card to show it's details!</p>
-
-        <div *ngIf="jobDetails">
-          <div class="card">
-            <h5 class="card-header">{{ jobDetails.category }}</h5>
-            <div class="card-body">
-              <h5 class="card-title">{{ jobDetails.company }}</h5>
-
-              <!-- {{jobDetails.contents}} -->
-
-              <div [innerHTML]="jobDetails.contents"></div>
-              <a href="#" class="btn btn-primary">Go somewhere</a>
+      <div class="col-8">
+        <div style="position: sticky; top: 16px">
+          <h3>Job Detail</h3>
+          <!-- <p>click a card to show it's details!</p> -->
+          <div *ngIf="jobDetails; else noDetails">
+            <div class="card">
+              <h5 class="card-header" style="background-color: #74B146">{{ jobDetails.category }}</h5>
+              <div class="card-body">
+                <h5 class="card-title">{{ jobDetails.company }}</h5>
+                <!-- {{jobDetails.contents}} -->
+                <div [innerHTML]="jobDetails.contents"></div>
+                <a href="#" class="btn btn-primary">Go somewhere</a>
+              </div>
             </div>
           </div>
+          <ng-template #noDetails>Click a card to show it's details</ng-template>
         </div>
       </div>
-    </div>
   </div>
 </div>

@@ -38,8 +38,6 @@ export class JobPostingComponent implements OnInit {
       });
 
       console.log(this.jobPosting);
-      // this.jobPosting = data;
-      // console.log(data);
     });
   }
 
@@ -47,4 +45,5 @@ export class JobPostingComponent implements OnInit {
     console.log(jobPost)
     this.jobDetails = jobPost
   }
+
 }
