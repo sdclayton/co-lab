@@ -21,11 +21,11 @@ export class ReplyFormComponent implements OnInit {
 
   onReply(InputReply: NgForm){
     const title = InputReply.value.title;
-    const postText = InputReply.value.postText;
+    const replyText = InputReply.value.postText;
     this.replyService.addReply({
       id: this.replyService.getReply().length + 1,
       title: title,
-      postText: postText,
+      replyText: replyText,
     });
   }
 

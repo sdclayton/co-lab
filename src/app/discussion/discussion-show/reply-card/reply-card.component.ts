@@ -8,7 +8,9 @@ import { ReplyService } from '../reply.service';
 })
 export class ReplyCardComponent implements OnInit {
 
-  replies: any
+  replies: any;
+  id: number;
+  replyPosted: Comment;
 
   constructor(private replyService: ReplyService) { }
 

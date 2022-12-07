@@ -1,4 +1,10 @@
-<div style="margin-top: 5%;">
+<div style="margin-top: 5%">
+    <button
+      type="button"
+      class="btn btn-danger"
+      routerLink="/discussion">
+       Back
+    </button>
 <div class="container">
 <div class="row">
   <div class="col-md-12">
@@ -15,14 +21,14 @@
           />
           <p>Username</p>
 
-          <h3>Question: {{ this.id}}</h3>
+          <h3>Question: {{discussionShared.title}}</h3>
           <div class="media-body ml-3">
             <a></a>
             <div class="text-muted small">ID {{ this.id }}</div>
           </div>
         </div>
         <div class="card-body">
-          <p>{{ this.id }}</p>
+          <p>{{ discussionShared.postText }}</p>
         </div>
         <div
           class="card-footer d-flex flex-wrap justify-content-between align-items-center px-0 pt-0 pb-3"
@@ -33,8 +39,15 @@
               class="btn btn-primary"
               (click)="OnClickOpenForm()"
             >
-              Reply</button
-            >
+              Reply</button> |
+            <button
+              type="button"
+              class="btn btn-danger"
+              [hidden]="!openForm"
+              (click)="onCancel()"
+              >
+              Cancel
+            </button>
           </div>
         </div>
       </div>
@@ -48,8 +61,3 @@
 <app-reply-form [hidden]="!openForm"></app-reply-form>
 <app-reply-card></app-reply-card>
 
-<!-- This to do
-1) button to commment on this page
-2) Use sticky feature on the og post
-3) Need conditional to see if id does equal 10
--->

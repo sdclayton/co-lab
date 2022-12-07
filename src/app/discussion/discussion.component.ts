@@ -1,5 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Discussion } from './discussion.model';
+import { Component, OnInit } from '@angular/core';
 
 @Component({
   selector: 'app-discussion',
