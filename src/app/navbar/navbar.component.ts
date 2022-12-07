@@ -9,7 +9,7 @@ import { AuthService } from '../shared/auth.service';
 })
 export class NavbarComponent implements OnInit, OnDestroy {
   isAuthenticated: boolean = false;
-  private userSub: Subscription
+  private userSub: Subscription;
 
   constructor(private authService: AuthService) { }
 
