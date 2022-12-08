@@ -12,6 +12,8 @@ import { HttpClientModule } from '@angular/common/http';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
+import { DashboardCalendarComponent } from './dashboard/dashboard-calendar/dashboard-calendar.component';
+
 
 @NgModule({
   declarations: [
@@ -19,7 +21,8 @@ import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
     LoginComponent,
     SignUpComponent,
     JobPostingComponent,
-    DashboardComponent
+    DashboardComponent,
+    DashboardCalendarComponent,
   ],
   imports: [
     BrowserModule,
