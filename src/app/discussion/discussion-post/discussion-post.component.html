@@ -1,6 +1,14 @@
 <h1>Discussions</h1>
 
 <form (ngSubmit)="onAddPost(InputRef)" #InputRef="ngForm">
+  <div
+    class="alert alert-info"
+    role="alert"
+    *ngIf="discussionSubmit"
+    style="cursor: pointer;"
+    routerLink="/discussion">
+    Your discussion has been received!
+  </div>
   <div class= "container">
     <div class="form-group">
       <label for="postText">Title</label>
@@ -27,6 +35,7 @@
       type="submit"
       class="btn btn-success"
       [disabled]="!InputRef.valid"
+      (click)="didSubmit()"
       >
       Submit
     </button> |

@@ -12,6 +12,7 @@ import { DiscussionService } from '../discussion.service';
 })
 export class DiscussionPostComponent implements OnInit {
   listPost: any;
+  discussionSubmit = false
 
   post: any = {
     title: '',
@@ -40,6 +41,11 @@ export class DiscussionPostComponent implements OnInit {
       postText: postText,
     });
   }
+
+  didSubmit() {
+    this.discussionSubmit = true
+  }
+
   // onBack(){
   //   this.router.navigate(['/discussion/card'], {relativeTo: this.route})
   // }
