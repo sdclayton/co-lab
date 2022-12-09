@@ -10,7 +10,7 @@ const routes: Routes = [
   {path: '', redirectTo: '/login', pathMatch: 'full' },
   {path: 'signup', component: SignUpComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'jobposting', component: JobPostingComponent, canActivate: [AuthGuard]},
+  {path: 'job-posting', component: JobPostingComponent, canActivate: [AuthGuard]},
 
 ];
 
