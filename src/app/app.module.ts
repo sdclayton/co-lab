@@ -13,6 +13,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { DashboardCalendarComponent } from './dashboard/dashboard-calendar/dashboard-calendar.component';
+import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
@@ -30,6 +31,7 @@ import { DashboardCalendarComponent } from './dashboard/dashboard-calendar/dashb
     FormsModule,
     HttpClientModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
+    NgbModule,
 
   ],
   providers: [JobPostingService],
