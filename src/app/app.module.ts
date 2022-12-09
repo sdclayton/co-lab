@@ -18,6 +18,7 @@ import { ReplyCardComponent } from './discussion/discussion-show/reply-card/repl
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { NavbarComponent } from './navbar/navbar.component';
 
 
 @NgModule({
@@ -26,13 +27,14 @@ import { HttpClientModule } from '@angular/common/http';
     LoginComponent,
     SignUpComponent,
     JobPostingComponent,
+    NavbarComponent,
     DiscussionComponent,
     DiscussionCardComponent,
     DiscussionPostComponent,
     PostDetailComponent,
     DiscussionShowComponent,
     ReplyFormComponent,
-    ReplyCardComponent
+    ReplyCardComponent,
   ],
   imports: [
     BrowserModule,
