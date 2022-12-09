@@ -9,6 +9,8 @@ import { ReplyService } from '../reply.service';
 })
 export class ReplyFormComponent implements OnInit {
 
+replySubmit: boolean = false
+
   reply: any = {
     title: '',
     postText: '',
@@ -29,5 +31,8 @@ export class ReplyFormComponent implements OnInit {
     });
   }
 
+  commentSubmit() {
+    this.replySubmit = true;
+  }
 
 }

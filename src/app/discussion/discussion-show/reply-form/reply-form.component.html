@@ -1,7 +1,13 @@
-<p>reply-form works!</p>
-
 <form (ngSubmit)="onReply(InputReply)" #InputReply="ngForm">
   <div class= "container">
+    <div
+    class="alert alert-info"
+    role="alert"
+    *ngIf="replySubmit"
+    style="cursor: pointer;"
+    >
+    Your reply has been received!
+  </div>
     <div class="form-group">
       <label for="postText">Title</label>
       <input
@@ -27,6 +33,7 @@
       type="submit"
       class="btn btn-success"
       [disabled]="!InputReply.valid"
+      (click)="commentSubmit()"
       >
       Submit
     </button>

@@ -43,10 +43,9 @@ export class DiscussionPostComponent implements OnInit {
   }
 
   didSubmit() {
-    this.discussionSubmit = true
+    this.discussionSubmit = true;
+    // this.router.navigate(['/discussion'], {relativeTo: this.route});
   }
 
-  // onBack(){
-  //   this.router.navigate(['/discussion/card'], {relativeTo: this.route})
-  // }
+
 }
