@@ -18,6 +18,8 @@ import { ReplyCardComponent } from './discussion/discussion-show/reply-card/repl
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { MatCheckboxModule } from '@angular/material/checkbox'
 
 
 @NgModule({
@@ -39,7 +41,9 @@ import { HttpClientModule } from '@angular/common/http';
     AppRoutingModule,
 
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
+    BrowserAnimationsModule,
+    MatCheckboxModule
   ],
   providers: [JobPostingService],
   bootstrap: [AppComponent]

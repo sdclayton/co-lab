@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { DiscussionService } from '../discussion.service';
 
 @Component({
@@ -8,6 +8,7 @@ import { DiscussionService } from '../discussion.service';
 })
 export class DiscussionCardComponent implements OnInit {
   listPost: any;
+  like = false;
 
   constructor(public discussionService: DiscussionService) {}
 
@@ -21,5 +22,7 @@ export class DiscussionCardComponent implements OnInit {
 
 
 
-  // onViewPost() {}
+ onLike(){
+  this.like = true;
+ }
 }
