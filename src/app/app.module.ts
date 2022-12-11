@@ -40,11 +40,12 @@ import { NavbarComponent } from './navbar/navbar.component';
     DiscussionShowComponent,
     ReplyFormComponent,
     ReplyCardComponent,
+    DashboardComponent,
+    DashboardCalendarComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
-
     FormsModule,
     HttpClientModule,
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),

@@ -8,6 +8,7 @@ export class DiscussionService {
 
 
   postChange = new Subject<Discussion[]>();
+  dashBoardChanged = new Subject<Discussion[]>();
   private discussionPost: Discussion[] = [
     {
       id: 0,
@@ -39,5 +40,15 @@ export class DiscussionService {
     this.discussionPost.push(newPost);
     this.postChange.next(this.getPost());
   }
+
+  addPostToDashboard(newDashboardPost: Discussion){
+    this.discussionPost.push(newDashboardPost[0]);
+    this.dashBoardChanged.next(this.getPost().slice());
+    console.log(newDashboardPost);
+  }
+
+  // getIndividualPost(index: number){
+  //   return this.discussionPost[index].slice();
+  // }
 
 }

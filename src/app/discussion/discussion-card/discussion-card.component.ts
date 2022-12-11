@@ -19,7 +19,9 @@ export class DiscussionCardComponent implements OnInit {
 
   }
 
-
+  onAddToDashboard(){
+    this.discussionService.addPostToDashboard(this.listPost);
+  }
 
   // onViewPost() {}
 }
