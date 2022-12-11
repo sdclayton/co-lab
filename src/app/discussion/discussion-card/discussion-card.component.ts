@@ -25,4 +25,8 @@ export class DiscussionCardComponent implements OnInit {
  onLike(){
   this.like = true;
  }
+
+ onDislike(){
+  this.like = false;
+ }
 }
