@@ -9,13 +9,15 @@ import { JobPostingService } from './job-posting/job-posting.service';
 import { JobPostingComponent } from './job-posting/job-posting.component';
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     LoginComponent,
     SignUpComponent,
-    JobPostingComponent
+    JobPostingComponent,
+    LandingPageComponent
   ],
   imports: [
     BrowserModule,
