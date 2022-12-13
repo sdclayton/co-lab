@@ -16,11 +16,11 @@ import { AuthGuard } from './shared/auth.guard';
 import { SignUpComponent } from './sign-up/sign-up.component';
 
 const routes: Routes = [
-  {path: '', redirectTo: '/login', pathMatch: 'full' },
+  {path: '', component: LandingPageComponent, pathMatch: 'full' },
   {path: 'signup', component: SignUpComponent},
   {path: 'login', component: LoginComponent},
   {path: 'job-posting', component: JobPostingComponent},
-  {path: 'landing-page', component: LandingPageComponent},
+  // {path: 'landing-page', component: LandingPageComponent},
   {
     path: 'discussion',
     component: DiscussionComponent
