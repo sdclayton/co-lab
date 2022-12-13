@@ -18,6 +18,7 @@ import { ReplyCardComponent } from './discussion/discussion-show/reply-card/repl
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 
@@ -27,6 +28,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginComponent,
     SignUpComponent,
     JobPostingComponent,
+    LandingPageComponent,
     NavbarComponent,
     DiscussionComponent,
     DiscussionCardComponent,
