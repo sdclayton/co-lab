@@ -23,6 +23,7 @@ import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
 import { DashboardCalendarComponent } from './dashboard/dashboard-calendar/dashboard-calendar.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
 
 
@@ -32,6 +33,7 @@ import { NavbarComponent } from './navbar/navbar.component';
     LoginComponent,
     SignUpComponent,
     JobPostingComponent,
+    LandingPageComponent,
     NavbarComponent,
     DiscussionComponent,
     DiscussionCardComponent,

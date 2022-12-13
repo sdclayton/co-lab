@@ -1,0 +1,97 @@
+/* #background {
+  background-image: url("../../assets/image/backgroundImage.png");
+  height: 100vh;
+} */
+
+/* .bg-image {
+  background-image: url("https://mdbcdn.b-cdn.net/img/new/slides/003.webp");
+  height: 400px;
+  width: 500px;
+  justify-content: center;
+} */
+
+/* Scrollspy */
+/* html {
+  background: url("../../assets/image/backgroundImage.png");
+  background-size: cover;
+} */
+.container {
+  padding: 60px 30px 60px 30px;
+}
+
+.body {
+  position: relative;
+  background-image: url("../../assets/image/backgroundImage.png");
+  height: 100vh;
+
+}
+.container {
+  margin-top: 100px;
+  text-align: center;
+}
+
+.title {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: bold;
+  font-size: 30px;
+  text-align: center;
+}
+
+p {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+  font-size: 20px;
+  text-align: center;
+}
+
+h1.intro-section {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: bold;
+  font-size: 60px;
+  align-content: center;
+  text-align: center;
+}
+
+.benefits-section {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: bold;
+  font-size: 60px;
+}
+
+h1.login-sign-section {
+  font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+  font-style: bold;
+  font-size: 90px;
+}
+
+.join-button {
+  color: white;
+  background-color: #5B9982;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  font-size: 25px;
+
+}
+
+h4 {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-style: normal;
+  font-size: xx-large;
+}
+
+/* .btn btn-primary {
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  font-style: normal;
+  font-size: 30px;
+  margin-right: 25px;
+  padding: 10px;
+}
+
+.login-button {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    font-style: normal;
+    font-size: 30px;
+    margin-left: 25px;
+    padding: 10px;
+} */
+
