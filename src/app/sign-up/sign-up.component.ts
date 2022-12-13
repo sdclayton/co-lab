@@ -29,7 +29,7 @@ export class SignUpComponent implements OnInit {
     authObs.subscribe(
       resData =>{
         console.log(resData);
-        this.router.navigate(['./login'])
+        this.router.navigate(['./jobposting'])
       })
   }
 }
