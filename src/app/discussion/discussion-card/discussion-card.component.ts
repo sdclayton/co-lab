@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Discussion } from '../discussion.model';
 import { DiscussionService } from '../discussion.service';
 
 @Component({
@@ -8,6 +9,8 @@ import { DiscussionService } from '../discussion.service';
 })
 export class DiscussionCardComponent implements OnInit {
   listPost: any;
+  discussion: Discussion[];
+
 
   constructor(public discussionService: DiscussionService) {}
 

@@ -13,7 +13,7 @@ import { JobPostingService } from '../job-posting/job-posting.service';
 })
 export class DashboardComponent implements OnInit, OnDestroy {
   // jobPosting: JobPosting[] = [];
-  @Input() discussion: Discussion[];
+  discussion: Discussion[] = [];
   private discChanged: Subscription;
   id: number;
   constructor(private discussionService: DiscussionService, private jobPostingService: JobPostingService) { }
