@@ -7,6 +7,9 @@ import { PostDetailComponent } from './discussion/post-detail/post-detail.compon
 
 
 
+import { LandingPageComponent } from './landing-page/landing-page.component';
+
+
 import { JobPostingComponent } from './job-posting/job-posting.component';
 import { LoginComponent } from './login/login.component';
 import { AuthGuard } from './shared/auth.guard';
@@ -17,6 +20,7 @@ const routes: Routes = [
   {path: 'signup', component: SignUpComponent},
   {path: 'login', component: LoginComponent},
   {path: 'job-posting', component: JobPostingComponent},
+  {path: 'landing-page', component: LandingPageComponent}
   {
     path: 'discussion',
     component: DiscussionComponent
