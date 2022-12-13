@@ -7,6 +7,7 @@ import { PostDetailComponent } from './discussion/post-detail/post-detail.compon
 
 
 
+
 import { LandingPageComponent } from './landing-page/landing-page.component';
 
 
@@ -20,10 +21,12 @@ const routes: Routes = [
   {path: 'signup', component: SignUpComponent},
   {path: 'login', component: LoginComponent},
   {path: 'job-posting', component: JobPostingComponent},
+
+
   {path: 'landing-page', component: LandingPageComponent},
+
   {
-    path: 'discussion',
-    component: DiscussionComponent
+    path: 'discussion', component: DiscussionComponent
   },
   { path: 'discussion/new', component: PostDetailComponent },
   {

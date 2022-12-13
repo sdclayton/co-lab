@@ -12,10 +12,10 @@
           <a class="nav-link" routerLink="/">Home</a>
         </li>
         <li class="nav-item" *ngIf="isAuthenticated" routerLinkActive="active">
-          <a class="nav-link" routerLink="/jobposting">Job Posting</a>
+          <a class="nav-link" routerLink="/job-posting">Job Posting</a>
         </li>
         <li class="nav-item" *ngIf="isAuthenticated" routerLinkActive="active">
-          <a class="nav-link" routerLink="/">Discussion</a>
+          <a class="nav-link" routerLink="/discussion">Discussion</a>
         </li>
       </ul>
       <button class="btn btn-outline-success" style="background-color: #DAE78E;" routerLink="/login" *ngIf="!isAuthenticated">Login</button>
