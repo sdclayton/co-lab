@@ -46,4 +46,8 @@ export class JobPostingComponent implements OnInit {
     this.jobDetails = jobPost
   }
 
+  onAddJobToDashboard(){
+    console.log(this.jobDetails)
+  }
+
 }
