@@ -4,7 +4,7 @@
   height: auto;
 }
 
-button {
+#startbutton {
   border-radius: 4px;
   background-color: #74B146;
   border: none;
@@ -20,14 +20,14 @@ button {
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
 }
 
-button{
+#startbutton{
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-button:after {
+#startsbutton:after {
   content: '»';
   position: absolute;
   opacity: 0;
@@ -36,12 +36,12 @@ button:after {
   transition: 0.5s;
 }
 
-button:hover{
+#startbutton:hover{
   padding-right: 24px;
   padding-left:8px;
 }
 
-button:hover:after {
+#startbutton:hover:after {
   opacity: 1;
   right: 10px;
 }
