@@ -1,5 +1,6 @@
 /* You can add global styles to this file, and also import other style files */
 
+
 @font-face {
     font-family: Oxygen;
     src: url('assets/fonts/Oxygen/Oxygen-Bold.ttf');
@@ -23,3 +24,4 @@
     font-family: Alfa_Slab_One;
     src: url('assets/fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf');
 }
+
