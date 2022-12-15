@@ -18,7 +18,7 @@ export class DiscussionService {
     },
     {
       id: 1,
-      title: 'How does one make cookies',
+      title: 'Which Codefi cohort is the best?',
       postText:
         'Tri-tip pork belly shoulder capicola pork picanha flank. Ribeye meatball corned beef bresaola sausage pancetta alcatra tenderloin. Strip steak ground round ball tip bresaola landjaeger, andouille filet mignon leberkas ham. Ground round hamburger turducken porchetta chislic bacon rump short loin sausage biltong pancetta shoulder burgdoggen cupim.',
       comment: [],

@@ -19,6 +19,7 @@ import { ReplyCardComponent } from './discussion/discussion-show/reply-card/repl
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DiscussionSearchComponent } from './discussion/discussion-search/discussion-search.component';
 
 
 @NgModule({
@@ -33,7 +34,8 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
     PostDetailComponent,
     DiscussionShowComponent,
     ReplyFormComponent,
-    ReplyCardComponent
+    ReplyCardComponent,
+    DiscussionSearchComponent
   ],
   imports: [
     BrowserModule,

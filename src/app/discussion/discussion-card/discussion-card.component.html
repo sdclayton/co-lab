@@ -1,7 +1,11 @@
+
+ <app-discussion-search (searchTextChanged)="onSearchTextEntered($event)" style="padding: 4px;"></app-discussion-search>
 <div
   class="container-fluid mt-100"
   *ngFor="let post of listPost; let postIndex = index"
 >
+  <div *ngIf="searchText === '' || post.title.toLowerCase().includes(searchText) "
+  >
   <div class="row">
     <div class="col-md-12">
       <div class="card mb-4">
@@ -75,4 +79,5 @@
       </div>
     </div>
   </div>
+</div>
 </div>

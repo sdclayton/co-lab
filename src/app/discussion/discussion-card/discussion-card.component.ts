@@ -9,6 +9,7 @@ import { DiscussionService } from '../discussion.service';
 export class DiscussionCardComponent implements OnInit {
   listPost: any;
   like = false;
+  searchText: string= '';
 
   constructor(public discussionService: DiscussionService) {}
 
@@ -20,8 +21,6 @@ export class DiscussionCardComponent implements OnInit {
 
   }
 
-
-
  onLike(){
   this.like = true;
  }
@@ -29,4 +28,8 @@ export class DiscussionCardComponent implements OnInit {
  onDislike(){
   this.like = false;
  }
+ onSearchTextEntered(searchValue:string){
+  this.searchText = searchValue;
+  // console.log(this.searchText);
+}
 }

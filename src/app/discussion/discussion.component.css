@@ -4,7 +4,7 @@
   height: auto;
 }
 
-#startbutton {
+.startbutton {
   border-radius: 4px;
   background-color: #74B146;
   border: none;
@@ -16,18 +16,19 @@
   width: 180px;
   transition: all 0.5s;
   cursor: pointer;
-  margin: 3px;
   box-shadow: 0 10px 20px -8px rgba(0, 0, 0,.7);
+  margin-left: 700px;
+  margin-top: 20px;
 }
 
-#startbutton{
+.startbutton{
   cursor: pointer;
   display: inline-block;
   position: relative;
   transition: 0.5s;
 }
 
-#startsbutton:after {
+.startbutton:after {
   content: '»';
   position: absolute;
   opacity: 0;
@@ -36,12 +37,12 @@
   transition: 0.5s;
 }
 
-#startbutton:hover{
+.startbutton:hover{
   padding-right: 24px;
   padding-left:8px;
 }
 
-#startbutton:hover:after {
+.startbutton:hover:after {
   opacity: 1;
   right: 10px;
 }
