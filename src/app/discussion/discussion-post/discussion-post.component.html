@@ -1,8 +1,5 @@
-<div id="backgroundColor">
-<div style="text-align: center;" id="titlePage">
-  <h1> New Discussion</h1>
-</div>
-<div id="pageLayout">
+<h1>Discussions</h1>
+
 <form (ngSubmit)="onAddPost(InputRef)" #InputRef="ngForm">
   <div
     class="alert alert-info"
@@ -30,7 +27,7 @@
         class="form-control"
         name="postText"
         id="postText"
-        style = "height:2.5in"
+        style = "width: 40rem; height:2.5in"
         [ngModel]="this.post.postText"
         required>
     </div>
@@ -51,7 +48,5 @@
     </button>
   </div>
 </form>
-</div>
-</div>
 
 
