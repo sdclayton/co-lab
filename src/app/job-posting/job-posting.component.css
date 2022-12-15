@@ -1,1 +1,22 @@
+h3 {
+    font-family: 'Alfa_Slab_One';
+}
+ h5 {
+    font-family:'Open_Sans_Bold';
+ }
 
+ h6 {
+    font-family: 'Open_Sans_Regular';
+ }
+
+a {
+    font-family: Oxygen;
+}
+
+button {
+    font-family: Oxygen;
+}
+
+p {
+    font-family: 'Open_Sans_Regular';
+}
