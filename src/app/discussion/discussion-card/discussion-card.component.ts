@@ -1,7 +1,5 @@
-
 import { Component, Input, OnInit } from '@angular/core';
 import { Discussion } from '../discussion.model';
-
 import { DiscussionService } from '../discussion.service';
 
 @Component({
@@ -11,12 +9,7 @@ import { DiscussionService } from '../discussion.service';
 })
 export class DiscussionCardComponent implements OnInit {
   listPost: any;
-
-  like = false;
-  searchText: string= '';
-
   discussion: Discussion[];
-
 
 
   constructor(public discussionService: DiscussionService) {}
@@ -29,22 +22,9 @@ export class DiscussionCardComponent implements OnInit {
 
   }
 
-
- onLike(){
-  this.like = true;
- }
-
- onDislike(){
-  this.like = false;
- }
- onSearchTextEntered(searchValue:string){
-  this.searchText = searchValue;
-  // console.log(this.searchText);
-}
-
   onAddToDashboard(){
     this.discussionService.addPostToDashboard(this.listPost);
   }
 
-
+  // onViewPost() {}
 }
