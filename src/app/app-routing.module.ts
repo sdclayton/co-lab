@@ -24,19 +24,20 @@ const routes: Routes = [
   {path: '', component: LandingPageComponent, pathMatch: 'full' },
   {path: 'signup', component: SignUpComponent},
   {path: 'login', component: LoginComponent},
-  {path: 'job-posting', component: JobPostingComponent},
-  {path: 'dashboard', component: DashboardComponent, children: [
+  {path: 'job-posting', component: JobPostingComponent, canActivate: [AuthGuard]},
+  {path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard], children: [
     {path: 'calendar', component: DashboardCalendarComponent}
   ]},
   {
     path: 'discussion',
-    component: DiscussionComponent
+    component: DiscussionComponent,
+    canActivate: [AuthGuard],
   },
-  {path: 'discussion', component: DiscussionComponent},
-  { path: 'discussion/new', component: PostDetailComponent },
+  { path: 'discussion/new', component: PostDetailComponent , canActivate: [AuthGuard]},
   {
     path: 'discussion/:id',
     component: DiscussionShowComponent,
+    canActivate: [AuthGuard],
   },
 ];
 
