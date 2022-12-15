@@ -18,6 +18,10 @@ import { ReplyCardComponent } from './discussion/discussion-show/reply-card/repl
 
 import { FormsModule } from '@angular/forms';
 import { HttpClientModule } from '@angular/common/http';
+
+import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
+import { DiscussionSearchComponent } from './discussion/discussion-search/discussion-search.component';
+
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { CalendarModule, DateAdapter } from 'angular-calendar';
 import { adapterFactory } from 'angular-calendar/date-adapters/date-fns';
@@ -25,6 +29,7 @@ import { DashboardCalendarComponent } from './dashboard/dashboard-calendar/dashb
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 import { LandingPageComponent } from './landing-page/landing-page.component';
 import { NavbarComponent } from './navbar/navbar.component';
+
 
 
 @NgModule({
@@ -42,14 +47,21 @@ import { NavbarComponent } from './navbar/navbar.component';
     DiscussionShowComponent,
     ReplyFormComponent,
     ReplyCardComponent,
+
+    DiscussionSearchComponent,
+
     DashboardComponent,
     DashboardCalendarComponent,
+
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
     HttpClientModule,
+
+    BrowserAnimationsModule,
+
     CalendarModule.forRoot({ provide: DateAdapter, useFactory: adapterFactory }),
     NgbModule,
 
