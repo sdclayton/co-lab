@@ -11,6 +11,8 @@ import { AuthResponseData, AuthService } from '../shared/auth.service';
   styleUrls: ['./login.component.css']
 })
 export class LoginComponent implements OnInit {
+  isLoading = false;
+  error:string = null;
 
   constructor(private authService: AuthService, private router: Router) { }
 
@@ -25,12 +27,21 @@ export class LoginComponent implements OnInit {
 
     let authObs: Observable<AuthResponseData>;
 
+    this.isLoading = true;
+
     authObs = this.authService.login(email, password);
 
     authObs.subscribe(
       resData =>{
         console.log(resData);
-        this.router.navigate(['./jobposting'])
-      })
+        this.isLoading = false;
+        this.router.navigate(['./dashboard'])
+      },
+      errorMessage => {
+        console.log(errorMessage);
+        this.error = errorMessage;
+        this.isLoading = false;
+      }
+    )
   }
 }

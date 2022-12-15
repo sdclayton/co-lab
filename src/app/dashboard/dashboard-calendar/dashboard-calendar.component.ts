@@ -26,12 +26,12 @@ import {
 import { EventColor } from 'calendar-utils';
 
 const colors: Record<string, EventColor> = {
-  red: {
-    primary: '#ad2121',
+  green: {
+    primary: '#DAE78E',
     secondary: '#FAE3E3',
   },
-  blue: {
-    primary: '#1e90ff',
+  darkGreen: {
+    primary: '#5B9982',
     secondary: '#D1E8FF',
   },
   yellow: {
@@ -52,7 +52,7 @@ export class DashboardCalendarComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  @ViewChild('modalContent', { static: true }) modalContent: TemplateRef<any>;
+  // @ViewChild('modalContent', { static: true }) modalContent: TemplateRef<any>;
 
   view: CalendarView = CalendarView.Month;
 
@@ -65,23 +65,23 @@ export class DashboardCalendarComponent implements OnInit {
     event: CalendarEvent;
   };
 
-  actions: CalendarEventAction[] = [
-    {
-      label: '<i class="fas fa-fw fa-pencil-alt"></i>',
-      a11yLabel: 'Edit',
-      onClick: ({ event }: { event: CalendarEvent }): void => {
-        this.handleEvent('Edited', event);
-      },
-    },
-    {
-      label: '<i class="fas fa-fw fa-trash-alt"></i>',
-      a11yLabel: 'Delete',
-      onClick: ({ event }: { event: CalendarEvent }): void => {
-        this.events = this.events.filter((iEvent) => iEvent !== event);
-        this.handleEvent('Deleted', event);
-      },
-    },
-  ];
+  // actions: CalendarEventAction[] = [
+  //   {
+  //     label: '<i class="fas fa-fw fa-pencil-alt"></i>',
+  //     a11yLabel: 'Edit',
+  //     onClick: ({ event }: { event: CalendarEvent }): void => {
+  //       this.handleEvent('Edited', event);
+  //     },
+  //   },
+  //   {
+  //     label: '<i class="fas fa-fw fa-trash-alt"></i>',
+  //     a11yLabel: 'Delete',
+  //     onClick: ({ event }: { event: CalendarEvent }): void => {
+  //       this.events = this.events.filter((iEvent) => iEvent !== event);
+  //       this.handleEvent('Deleted', event);
+  //     },
+  //   },
+  // ];
 
   refresh = new Subject<void>();
 
@@ -90,8 +90,8 @@ export class DashboardCalendarComponent implements OnInit {
       start: subDays(startOfDay(new Date()), 1),
       end: addDays(new Date(), 1),
       title: 'A 3 day event',
-      color: { ...colors.red },
-      actions: this.actions,
+      color: { ...colors.green },
+      // actions: this.actions,
       allDay: true,
       resizable: {
         beforeStart: true,
@@ -103,13 +103,13 @@ export class DashboardCalendarComponent implements OnInit {
       start: startOfDay(new Date()),
       title: 'An event with no end date',
       color: { ...colors.yellow },
-      actions: this.actions,
+      // actions: this.actions,
     },
     {
       start: subDays(endOfMonth(new Date()), 3),
       end: addDays(endOfMonth(new Date()), 3),
       title: 'A long event that spans 2 months',
-      color: { ...colors.blue },
+      color: { ...colors.darkGreen },
       allDay: true,
     },
     {
@@ -117,7 +117,7 @@ export class DashboardCalendarComponent implements OnInit {
       end: addHours(new Date(), 2),
       title: 'A draggable and resizable event',
       color: { ...colors.yellow },
-      actions: this.actions,
+      // actions: this.actions,
       resizable: {
         beforeStart: true,
         afterEnd: true,
@@ -164,7 +164,7 @@ export class DashboardCalendarComponent implements OnInit {
 
   handleEvent(action: string, event: CalendarEvent): void {
     this.modalData = { event, action };
-    this.modal.open(this.modalContent, { size: 'lg' });
+    // this.modal.open(this.modalContent, { size: 'lg' });
   }
 
   addEvent(): void {
@@ -174,7 +174,7 @@ export class DashboardCalendarComponent implements OnInit {
         title: 'New event',
         start: startOfDay(new Date()),
         end: endOfDay(new Date()),
-        color: colors.red,
+        color: colors.green,
         draggable: true,
         resizable: {
           beforeStart: true,

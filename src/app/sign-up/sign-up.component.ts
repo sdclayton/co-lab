@@ -10,7 +10,8 @@ import { AuthResponseData, AuthService } from '../shared/auth.service';
   styleUrls: ['./sign-up.component.css']
 })
 export class SignUpComponent implements OnInit {
-
+  error:string = null;
+  isLoading = false;
   constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit(): void {
@@ -24,12 +25,21 @@ export class SignUpComponent implements OnInit {
 
     let authObs: Observable<AuthResponseData>;
 
+    this.isLoading = true;
+
     authObs = this.authService.signup(email, password);
 
     authObs.subscribe(
       resData =>{
         console.log(resData);
-        this.router.navigate(['./job-posting'])
-      })
+        this.isLoading = false;
+        this.router.navigate(['./dashboard'])
+      },
+      errorMessage => {
+        console.log(errorMessage);
+        this.error = errorMessage;
+        this.isLoading = false;
+      }
+    )
   }
 }
