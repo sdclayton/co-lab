@@ -1,0 +1,79 @@
+<!-- Scrollspy Bootstrap -->
+<!-- NavBar -->
+<!-- <nav id="scrollnabvar" class="navbar navbar-light bg-light px-3">
+  <a class="navbar-co-lab" href="#">Co-Lab</a>
+  <ul class="nav nav-pills">
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyIntro">Intro</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#scrollspyBenefits">Benefits</a>
+    </li>
+    <li class="nav-link" href="scrollspyWelcome">Welcome</li>
+  </ul>
+</nav> -->
+
+<!-- Content -->
+<div data-bs-spy="scroll" data-bs-target="#navbar-example2" data-bs-offset="0"   class="scrollspy-example" tabindex="0">
+  <!-- First Section -->
+  <div class="container">
+    <!-- <img src="../../assets/image/co-labs.png"> -->
+    <h1 class="intro-section" id="scrollsypIntro">POWERING THE COMMUNITY</h1>
+    <h4>Empowering the Rural Communities </h4>
+    <button class="btn btn-primary btn-large" (click)="goToSignUp()">Join the Community</button>
+  </div>
+  <!-- Second Section -->
+  <div class="container">
+    <h1 class="benefits-section" id="scrollspyBenefits">BENEFITS</h1>
+    <div class="benefits">
+      <div class="row">
+        <div class="col-6">
+          <div class="icon">
+            <img src="../../assets/image/resource-icon.png">
+          </div>
+          <div class="title">CODING RESOURCES</div>
+          <div class="description">
+            <p>Tutorials, articles, videos, and other educational materials to excel</p>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="icon">
+            <img src="../../assets/image/global-icon.png">
+          </div>
+          <div class="title">GLOBAL COMMUNITY</div>
+          <div class="description">
+            <p>Advance your skills with other developers online and at networking events.</p>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="icon">
+            <img src="../../assets/image/job-posting-icon.png">
+          </div>
+          <div class="title">CO-LAB JOB BOARD</div>
+          <div class="description">
+            <p>Pursure your next steps with companies that want you apart of their team.</p>
+          </div>
+        </div>
+        <div class="col-6">
+          <div class="icon">
+            <img src="../../assets/image/applaud-icon.png">
+          </div>
+          <div class="title">APPLAUD ONE ANOTHER</div>
+          <div class="description">
+            <p>Give and receive recognation for professional achievements!</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- Third Section -->
+  <div class="container">
+    <div class="login-sign-section">
+      <h1 class="scrollspyWelcome">WELCOME TO CO-LABS</h1>
+      <div class="buttons">
+        <button class="btn btn-primary btn-large" (click)="goToSignUp()" style="margin-right: 25px">Sign Up</button>
+        <button class="btn btn-success btn-large" (click)="goToLogin()" style="margin-left: 25px;">Login</button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,4 +1,27 @@
 /* You can add global styles to this file, and also import other style files */
 
-html, body { height: 100%; }
-body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+@font-face {
+    font-family: Oxygen;
+    src: url('assets/fonts/Oxygen/Oxygen-Bold.ttf');
+}
+
+.Oxygen {
+    font-family: Oxygen;
+}
+
+@font-face {
+    font-family: Open_Sans_Bold;
+    src: url('assets/fonts/Open_Sans/static/OpenSans/OpenSans-Bold.ttf');
+}
+
+@font-face {
+    font-family: Open_Sans_Regular;
+    src: url('assets/fonts/Open_Sans/static/OpenSans/OpenSans-Regular.ttf');
+}
+
+@font-face {
+    font-family: Alfa_Slab_One;
+    src: url('assets/fonts/Alfa_Slab_One/AlfaSlabOne-Regular.ttf');
+}
+
